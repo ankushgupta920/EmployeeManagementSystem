@@ -1,0 +1,71 @@
+﻿@model EmployeeManagementSystem.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="mt-3">
+    <h2 class="p-3 mb-2  bg-secondary  text-light text-center fw-bold">DETAILS OF EMPLOYEE</h2>
+</div>
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <div>
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.designation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.designation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.image_path)
+            </dt>
+
+            <dd>
+                <img src="@Url.Content(Session["Image2"].ToString())" height="80" width="80" />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.phone_number)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.phone_number)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <button type="button" class="btn btn-primary">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "text-white TextDecoration" })
+        </button>
+        <button type="button" class="btn btn-info">
+            @Html.ActionLink("Back to List", "Index", "Home", new { @class = "text-white TextDecoration" })
+        </button>
+
+    </p>

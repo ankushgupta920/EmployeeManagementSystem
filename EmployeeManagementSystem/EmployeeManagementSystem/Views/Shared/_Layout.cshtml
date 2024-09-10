@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light fixed-top p-1 " style="background-color: white;">
+        <div class="container-fluid">
+            <div style="font-size: 1.5em;">EMS Dashboard </div>
+            <div class="ms-2">
+                <img src="~/images/transfer_man_employee_user_avatar_arrow_refresh_icon_141997.png" width="40" height="40" />
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    @if (Session["username"] != null)
+                    {
+
+                        <button type="button" class="btn btn-danger btn-sm ">@Html.ActionLink("Admin Logout", "Logout", "Login", new { area = "" }, new { @class = "nav-link " })</button>
+                    }
+
+                </form>
+            </div>
+        </div>
+    </nav>
+      
+
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

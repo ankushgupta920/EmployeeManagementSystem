@@ -1,0 +1,145 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #c9d6ff;
+    background: linear-gradient(to right,#e2e2e2,#c9d6ff);
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    /* border: black solid 4px; */
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+    .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+
+        .container .title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0%;
+            height: 3px;
+            width: 30px;
+            background-color: #c9d6ff;
+            background: linear-gradient(to right,#e2e2e2,#c9d6ff);
+        }
+
+    .container form .user_details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+    }
+
+form .user_details .input-box {
+    margin-bottom: 25px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user_details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user_details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    /*border: 1px solid #ccc;*/
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+    .user_details .input-box input:focus,
+    .user_details .input-box input:valid {
+        border-color: #c9d6ff;
+    }
+
+form .button {
+    height: 45px;
+/*    margin: 40px 0;*/
+}
+
+    form .button input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: none;
+   /*     background-color: #c9d6ff;
+        background: linear-gradient(to right,#e2e2e2,#c9d6ff);*/
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+    }
+
+        form .button input:hover {
+            background-color: #c9d6ff;
+            background: linear-gradient(to right,#e2e2e2,#c9d6ff);
+            
+        }
+
+/* Form Validation CSS */
+.input-box.success input {
+    border-color: #2ecc71;
+}
+
+.input-box.error input {
+    border-color: #e74c3c;
+}
+
+.input-box {
+    position: relative;
+}
+
+    .input-box i {
+        position: absolute;
+        /* border: black solid 2px; */
+        top: 42px;
+        right: 2%;
+        visibility: hidden;
+    }
+
+    .input-box small {
+        color: #e74c3c;
+        position: absolute;
+        left: 0;
+        visibility: hidden;
+    }
+
+    .input-box.error small {
+        visibility: visible;
+    }
+
+    .input-box.success i.fa-circle-check {
+        color: #2ecc71;
+        visibility: visible;
+    }
+
+    .input-box.error i.fa-circle-exclamation {
+        color: #e74c3c;
+        visibility: visible;
+    }
